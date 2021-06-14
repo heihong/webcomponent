@@ -1,0 +1,18 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import { MyComponent } from './my-component';
+
+<Meta title="MDX/MyComponent" component={MyComponent} />
+
+const Template = args => MyComponent(args);
+
+<Canvas>
+  <Story
+    name="Primary"
+    args={{
+      first: 'Stencil',
+      last: "'Don't call me a framework' JS",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
